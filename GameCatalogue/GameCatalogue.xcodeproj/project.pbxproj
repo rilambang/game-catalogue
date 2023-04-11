@@ -200,8 +200,11 @@
 			isa = PBXGroup;
 			children = (
 				90FDB9A929DB43F100B484F9 /* Info.plist */,
+				90FDB9A029DB430300B484F9 /* Networker */,
+				90FDB99B29DB42BB00B484F9 /* Services */,
+				90FDB99829DB421B00B484F9 /* Data */,
+				90FDB99529DB40F400B484F9 /* DI */,
 				90FDB9BC29DB483900B484F9 /* Presentation */,
-				90FDB99429DB40ED00B484F9 /* Core */,
 				90FDB96A29DB409C00B484F9 /* GameCatalogueApp.swift */,
 				90FDB96C29DB409C00B484F9 /* ContentView.swift */,
 				90FDB96E29DB409E00B484F9 /* Assets.xcassets */,
@@ -233,17 +236,6 @@
 				90FDB98729DB409E00B484F9 /* GameCatalogueUITestsLaunchTests.swift */,
 			);
 			path = GameCatalogueUITests;
-			sourceTree = "<group>";
-		};
-		90FDB99429DB40ED00B484F9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				90FDB9A029DB430300B484F9 /* Networker */,
-				90FDB99B29DB42BB00B484F9 /* Services */,
-				90FDB99829DB421B00B484F9 /* Data */,
-				90FDB99529DB40F400B484F9 /* DI */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		90FDB99529DB40F400B484F9 /* DI */ = {

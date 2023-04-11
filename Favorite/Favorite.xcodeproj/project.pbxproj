@@ -11,9 +11,26 @@
 		906BE25829E5A01700B4EA4F /* Favorite.docc in Sources */ = {isa = PBXBuildFile; fileRef = 906BE25729E5A01700B4EA4F /* Favorite.docc */; };
 		906BE25929E5A01700B4EA4F /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 906BE25629E5A01700B4EA4F /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		906BE26029E5A04C00B4EA4F /* FavoriteMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BE25F29E5A04C00B4EA4F /* FavoriteMainView.swift */; };
-		906BE26429E5A1BD00B4EA4F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE26329E5A1BD00B4EA4F /* Core.framework */; };
-		906BE28829E5A33D00B4EA4F /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE28729E5A33D00B4EA4F /* Component.framework */; };
+		9086198E29E612A70041C500 /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE28729E5A33D00B4EA4F /* Component.framework */; };
+		9086198F29E612A70041C500 /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE28729E5A33D00B4EA4F /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9086199129E612A80041C500 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE26329E5A1BD00B4EA4F /* Core.framework */; };
+		9086199229E612A80041C500 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE26329E5A1BD00B4EA4F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9086199029E612A70041C500 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9086198F29E612A70041C500 /* Component.framework in Embed Frameworks */,
+				9086199229E612A80041C500 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		906BE25329E5A01700B4EA4F /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,9 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906BE28829E5A33D00B4EA4F /* Component.framework in Frameworks */,
+				9086198E29E612A70041C500 /* Component.framework in Frameworks */,
+				9086199129E612A80041C500 /* Core.framework in Frameworks */,
 				42118ECA9AC7C27A6F278180 /* Pods_Favorite.framework in Frameworks */,
-				906BE26429E5A1BD00B4EA4F /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +129,7 @@
 				906BE24F29E5A01700B4EA4F /* Sources */,
 				906BE25029E5A01700B4EA4F /* Frameworks */,
 				906BE25129E5A01700B4EA4F /* Resources */,
+				9086199029E612A70041C500 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

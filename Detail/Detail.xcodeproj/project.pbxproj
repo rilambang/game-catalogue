@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9003106D29E5948300135BD8 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9003106C29E5948300135BD8 /* Core.framework */; };
 		902D64E629E591C800E065CE /* Detail.docc in Sources */ = {isa = PBXBuildFile; fileRef = 902D64E529E591C800E065CE /* Detail.docc */; };
 		902D64E729E591C800E065CE /* Detail.h in Headers */ = {isa = PBXBuildFile; fileRef = 902D64E429E591C800E065CE /* Detail.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		902D64F229E5924600E065CE /* DetailMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D64F129E5924600E065CE /* DetailMainView.swift */; };
+		9086198B29E6129C0041C500 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9003106C29E5948300135BD8 /* Core.framework */; };
+		9086198C29E6129C0041C500 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9003106C29E5948300135BD8 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4F4FBC49CAD92C9373AB492 /* Pods_Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9F09B06FA06E8C5631B34 /* Pods_Detail.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9086198D29E6129C0041C500 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9086198C29E6129C0041C500 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E2FD7FA665497820A425DF8 /* Pods-Detail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detail.debug.xcconfig"; path = "Target Support Files/Pods-Detail/Pods-Detail.debug.xcconfig"; sourceTree = "<group>"; };
@@ -31,7 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F4FBC49CAD92C9373AB492 /* Pods_Detail.framework in Frameworks */,
-				9003106D29E5948300135BD8 /* Core.framework in Frameworks */,
+				9086198B29E6129C0041C500 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +123,7 @@
 				902D64DD29E591C800E065CE /* Sources */,
 				902D64DE29E591C800E065CE /* Frameworks */,
 				902D64DF29E591C800E065CE /* Resources */,
+				9086198D29E6129C0041C500 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -10,9 +10,24 @@
 		906BE27929E5A26A00B4EA4F /* Component.docc in Sources */ = {isa = PBXBuildFile; fileRef = 906BE27829E5A26A00B4EA4F /* Component.docc */; };
 		906BE27A29E5A26A00B4EA4F /* Component.h in Headers */ = {isa = PBXBuildFile; fileRef = 906BE27729E5A26A00B4EA4F /* Component.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		906BE28229E5A29400B4EA4F /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BE28129E5A29400B4EA4F /* GameCardView.swift */; };
-		906BE28429E5A30700B4EA4F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE28329E5A30700B4EA4F /* Core.framework */; };
+		9086199329E612AE0041C500 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE28329E5A30700B4EA4F /* Core.framework */; };
+		9086199429E612AE0041C500 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 906BE28329E5A30700B4EA4F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA979778C1E711F231DB6496 /* Pods_Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D6896CDACDB74B9EDFCAC4 /* Pods_Component.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9086199529E612AE0041C500 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9086199429E612AE0041C500 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		12D6896CDACDB74B9EDFCAC4 /* Pods_Component.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Component.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,7 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA979778C1E711F231DB6496 /* Pods_Component.framework in Frameworks */,
-				906BE28429E5A30700B4EA4F /* Core.framework in Frameworks */,
+				9086199329E612AE0041C500 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +131,7 @@
 				906BE27029E5A26A00B4EA4F /* Sources */,
 				906BE27129E5A26A00B4EA4F /* Frameworks */,
 				906BE27229E5A26A00B4EA4F /* Resources */,
+				9086199529E612AE0041C500 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

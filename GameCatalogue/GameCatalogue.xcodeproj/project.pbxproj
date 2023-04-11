@@ -17,7 +17,7 @@
 		901039C429E5C32900C31EEB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 901039C229E5C32800C31EEB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		901039C629E5C32D00C31EEB /* Component.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901039C529E5C32D00C31EEB /* Component.framework */; };
 		901039C729E5C32D00C31EEB /* Component.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 901039C529E5C32D00C31EEB /* Component.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		906BE2AB29E5BED300B4EA4F /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 906BE2AA29E5BED300B4EA4F /* Profile */; };
+		901039D429E5CD0100C31EEB /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 901039D329E5CD0100C31EEB /* Profile */; };
 		90FDB96B29DB409C00B484F9 /* GameCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDB96A29DB409C00B484F9 /* GameCatalogueApp.swift */; };
 		90FDB96D29DB409C00B484F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDB96C29DB409C00B484F9 /* ContentView.swift */; };
 		90FDB96F29DB409E00B484F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FDB96E29DB409E00B484F9 /* Assets.xcassets */; };
@@ -128,8 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901039D429E5CD0100C31EEB /* Profile in Frameworks */,
 				901039C629E5C32D00C31EEB /* Component.framework in Frameworks */,
-				906BE2AB29E5BED300B4EA4F /* Profile in Frameworks */,
 				901039C329E5C32900C31EEB /* Core.framework in Frameworks */,
 				BE9AD05267FE3DF260A17233 /* Pods_GameCatalogue.framework in Frameworks */,
 				901039BD29E5C32200C31EEB /* Favorite.framework in Frameworks */,
@@ -374,7 +374,7 @@
 			);
 			name = GameCatalogue;
 			packageProductDependencies = (
-				906BE2AA29E5BED300B4EA4F /* Profile */,
+				901039D329E5CD0100C31EEB /* Profile */,
 			);
 			productName = GameCatalogue;
 			productReference = 90FDB96729DB409C00B484F9 /* GameCatalogue.app */;
@@ -449,7 +449,7 @@
 			);
 			mainGroup = 90FDB95E29DB409C00B484F9;
 			packageReferences = (
-				906BE2A929E5BED300B4EA4F /* XCRemoteSwiftPackageReference "Modularization-Profile-Package" */,
+				901039D229E5CD0100C31EEB /* XCRemoteSwiftPackageReference "Modularization-Profile-Package" */,
 			);
 			productRefGroup = 90FDB96829DB409C00B484F9 /* Products */;
 			projectDirPath = "";
@@ -883,9 +883,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		906BE2A929E5BED300B4EA4F /* XCRemoteSwiftPackageReference "Modularization-Profile-Package" */ = {
+		901039D229E5CD0100C31EEB /* XCRemoteSwiftPackageReference "Modularization-Profile-Package" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:rilambang/Modularization-Profile-Package.git";
+			repositoryURL = "https://github.com/rilambang/Modularization-Profile-Package.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -894,9 +894,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		906BE2AA29E5BED300B4EA4F /* Profile */ = {
+		901039D329E5CD0100C31EEB /* Profile */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 906BE2A929E5BED300B4EA4F /* XCRemoteSwiftPackageReference "Modularization-Profile-Package" */;
+			package = 901039D229E5CD0100C31EEB /* XCRemoteSwiftPackageReference "Modularization-Profile-Package" */;
 			productName = Profile;
 		};
 /* End XCSwiftPackageProductDependency section */

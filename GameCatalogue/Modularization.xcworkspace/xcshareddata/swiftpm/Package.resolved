@@ -3,10 +3,10 @@
     {
       "identity" : "modularization-profile-package",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:rilambang/Modularization-Profile-Package.git",
+      "location" : "https://github.com/rilambang/Modularization-Profile-Package.git",
       "state" : {
-        "revision" : "9602b3e435d0652f0aa25c203063f1abf0084f1e",
-        "version" : "1.0.0"
+        "branch" : "main",
+        "revision" : "9602b3e435d0652f0aa25c203063f1abf0084f1e"
       }
     }
   ],

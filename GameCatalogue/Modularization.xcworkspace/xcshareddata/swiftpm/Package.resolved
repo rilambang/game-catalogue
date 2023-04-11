@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "modularization-profile-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rilambang/Modularization-Profile-Package.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9602b3e435d0652f0aa25c203063f1abf0084f1e"
+      }
+    }
+  ],
+  "version" : 2
+}

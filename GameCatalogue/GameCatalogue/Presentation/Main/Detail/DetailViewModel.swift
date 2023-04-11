@@ -46,15 +46,6 @@ class DetailViewModel: ObservableObject {
             .store(in: &cancellable)
     }
 
-    func changeDateFormat(_ date: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let showDate = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let resultString = dateFormatter.string(from: showDate!)
-        return resultString
-    }
-
     func addFavorite() {
         if let data = dataDetail {
             let favorite = Favorite(id: Int32(data.id ?? 0), title: data.name ?? "", image: data.backgroundImage ?? "", releaseDate: data.released ?? "", rating: data.rating ?? 0.0)

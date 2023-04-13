@@ -10,6 +10,7 @@ import Core
 
 class FavoriteViewModel: ObservableObject {
     @Published var favorites: [Favorite] = []
+    @Published var selectedId: Int = 0
     private let useCase: FavoriteUseCaseProtocol
 
     init(useCase: FavoriteUseCaseProtocol) {

@@ -17,7 +17,7 @@ struct FavoriteView: View {
     }
     public var body: some View {
         VStack {
-            FavoriteMainView(favorites: favVM.favorites)
+            FavoriteMainView(favorites: favVM.favorites, destinationDetailView: DetailView(detailVM: diContainer.provideDetail(), gameId: favVM.selectedId), selectedId: $favVM.selectedId)
         }
         .onAppear {
             favVM.getAllFavorites()

@@ -23,7 +23,7 @@ struct FavoriteView: View {
                             LazyVGrid(columns: columns, spacing: 16) {
                                 ForEach(favVM.favorites, id: \.id) { item in
                                     NavigationLink(destination: DetailView(detailVM: diContainer.provideDetail(), gameId: Int(item.id))) {
-                                        GameCardView(image: item.image, name: item.title, released: item.releaseDate, rating: item.rating )
+                                        GameCardView(image: item.image , name: item.title, released: item.releaseDate, rating: item.rating, isDetail: true )
                                     }
                                 }
                             }
@@ -38,8 +38,14 @@ struct FavoriteView: View {
             }
         }
         .onAppear {
-            favVM.getAllFavorites()
+          favVM.getAllFavorites()
         }
         .navigationTitle("Favorite")
     }
 }
+
+// struct FavoriteView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FavoriteView()
+//    }
+// }

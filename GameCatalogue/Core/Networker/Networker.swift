@@ -10,16 +10,16 @@ import Combine
 
 protocol NetworkerProtocol: AnyObject {
     func get<T>(type: T.Type,
-                endPoint: NetworkFactory
+                endPoint : NetworkFactory
     ) -> AnyPublisher<T, Error> where T: Decodable
 
-    func post<T>(type: T.Type, endPoint: NetworkFactory
+    func post<T>(type: T.Type, endPoint : NetworkFactory
     ) -> AnyPublisher<T, Error> where T: Decodable
 
 }
 
 final class Networker: NetworkerProtocol {
-    func get<T>(type: T.Type, endPoint: NetworkFactory) -> AnyPublisher<T, Error> where T: Decodable {
+    func get<T>(type: T.Type, endPoint: NetworkFactory) -> AnyPublisher<T, Error> where T : Decodable {
         var urlRequest = URLRequest(url: endPoint.url)
         if let header = endPoint.headers {
             header.forEach { key, value in
@@ -30,13 +30,13 @@ final class Networker: NetworkerProtocol {
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .print()
             .retry(2)
-            .tryMap { data, response in
+            .tryMap { data , response in
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw NetworkError.middlewareError(code: 500, message: "Connection Error")
                 }
 
                 guard 200..<300 ~= httpResponse.statusCode else {
-                    let res  = try JSONDecoder().decode(ErrorHandling.self, from: data)
+                    let res  = try JSONDecoder().decode(ErrorHandling.self,from:data)
                     let error = self.mapHTTPError(with: res.code, errorMessage: res.message)
                     throw error
                 }
@@ -52,11 +52,11 @@ final class Networker: NetworkerProtocol {
             .eraseToAnyPublisher()
     }
 
-    func post<T>(type: T.Type, endPoint: NetworkFactory) -> AnyPublisher<T, Error> where T: Decodable {
+    func post<T>(type: T.Type, endPoint: NetworkFactory) -> AnyPublisher<T, Error> where T : Decodable {
 
-#if DEVELOPMENT || NETFOX
-        //            NFX.sharedInstance().start()
-#endif
+        #if DEVELOPMENT || NETFOX
+//            NFX.sharedInstance().start()
+        #endif
         var urlRequest = URLRequest(url: endPoint.url)
         urlRequest.httpMethod = "POST"
         if let header = endPoint.headers {
@@ -71,12 +71,12 @@ final class Networker: NetworkerProtocol {
         print(endPoint)
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .print()
-            .tryMap { data, response in
+            .tryMap { data , response in
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw NetworkError.middlewareError(code: 500, message: "Connection Error")
                 }
                 guard 200..<300 ~= httpResponse.statusCode else {
-                    let res  = try JSONDecoder().decode(ErrorHandling.self, from: data)
+                    let res  = try JSONDecoder().decode(ErrorHandling.self,from:data)
                     let error = self.mapHTTPError(with: res.code, errorMessage: res.message)
                     throw error
                 }
@@ -97,8 +97,8 @@ final class Networker: NetworkerProtocol {
 }
 
 extension Networker {
-    private func mapHTTPError(with code: Int, errorMessage: String) -> NetworkError {
-        let error: NetworkError
+    private func mapHTTPError(with code : Int, errorMessage: String) -> NetworkError {
+        let error : NetworkError
         switch code {
         default:
             error = .middlewareError(code: code, message: errorMessage)

@@ -7,9 +7,7 @@
 
 import Foundation
 
-func changeDateFormat(_ date: String,
-                      inputFormat: String = "yyyy-MM-dd",
-                      outputFormat: String = "dd-MM-yyyy") -> String? {
+func changeDateFormat(_ date: String, inputFormat: String = "yyyy-MM-dd", outputFormat: String = "dd-MM-yyyy") -> String? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = inputFormat
     guard let showDate = dateFormatter.date(from: date) else {

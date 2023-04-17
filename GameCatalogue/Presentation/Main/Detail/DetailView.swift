@@ -40,9 +40,8 @@ struct DetailView: View {
                                 VStack(alignment: .leading) {
                                     Text(detailVM.dataDetail?.name ?? "")
                                         .font(.headline)
-                                    Text("Release date: \(changeDateFormat(detailVM.dataDetail?.released ?? "N/A") ?? "N/A")")
+                                    Text("Release date: \(detailVM.changeDateFormat(detailVM.dataDetail?.released ?? ""))")
                                         .font(.subheadline)
-                                        .italic()
                                     Text(String("Rating: \(detailVM.dataDetail?.rating ?? 0)"))
                                         .font(.subheadline)
                                 }
@@ -55,9 +54,12 @@ struct DetailView: View {
                                         } else {
                                             detailVM.deleteFavourite()
                                         }
+                                        Task.init {
+                                            await detailVM.loadData(gameId)
+                                        }
                                     }) {
                                         Image(systemName: detailVM.dataDetail?.status ?? false ? "heart.fill" : "heart")
-                                            .foregroundColor(.pink)
+                                        .foregroundColor(.pink)
                                     }
                                     Text("Favorite")
                                         .font(.subheadline)

@@ -42,3 +42,4 @@ class FavoriteUseCase: FavoriteUseCaseProtocol {
         return repository.getFavoriteById(id)
     }
 }
+

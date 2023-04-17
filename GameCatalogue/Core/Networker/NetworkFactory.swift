@@ -80,7 +80,7 @@ extension NetworkFactory {
     }
 
     // Header param
-    var headers: [String: String]? {
+    var headers: [String : String]? {
         switch self {
         case .getListGames, .getDetailGames:
             return getHeaders()
@@ -88,7 +88,8 @@ extension NetworkFactory {
     }
 
     fileprivate func getHeaders() -> [String: String] {
-        let header = ["Content-Type": "application/json", "Accept": "*/*"]
+        let header = ["Content-Type": "application/json", "Accept" : "*/*"]
         return header
     }
 }
+

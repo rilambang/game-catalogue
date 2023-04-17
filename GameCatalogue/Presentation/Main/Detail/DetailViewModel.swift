@@ -29,11 +29,9 @@ class DetailViewModel: ObservableObject {
             .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
-                    if let networkError = error as? NetworkError {
-                        switch networkError {
-                        case .middlewareError:
-                            self?.detailState = .loaded
-                        }
+                    switch error as! NetworkError {
+                    case .middlewareError:
+                        self?.detailState = .loaded
                     }
                 case .finished:
                     self?.detailState = .loaded
@@ -58,12 +56,14 @@ class DetailViewModel: ObservableObject {
         if let data = dataDetail {
             let favorite = Favorite(id: Int32(data.id ?? 0), title: data.name ?? "", image: data.backgroundImage ?? "", releaseDate: data.released ?? "", rating: data.rating ?? 0.0)
             useCase.addNew(favorite: favorite)
+            debugPrint("added:",favorite)
         }
     }
 
     func deleteFavourite() {
         if let data = favouriteData {
             useCase.delete(favorite: data)
+            debugPrint("deleted:", data)
         }
     }
 

@@ -18,27 +18,13 @@ class Injection: ObservableObject {
     lazy var favoriteUseCase: FavoriteUseCase = {
         FavoriteUseCase(repository: favoriteRepository)
     }()
-    func provideNetworker() -> Networker {
-      return Networker()
-    }
-
     func provideHome() -> HomeViewModel {
-        return HomeViewModel(homeServices: provideHomeServices())
+        return HomeViewModel(homeServices: HomeServices())
     }
-
     func provideDetail() -> DetailViewModel {
-        return DetailViewModel(detailServices: provideDetailServices(), useCase: favoriteUseCase)
+        return DetailViewModel(detailServices: DetailServices(), useCase: favoriteUseCase)
     }
-
     func provideFavorite() -> FavoriteViewModel {
         return FavoriteViewModel(useCase: favoriteUseCase)
-    }
-
-    func provideHomeServices() -> HomeServices {
-      return HomeServices(networker: provideNetworker())
-    }
-
-    func provideDetailServices() -> DetailServices {
-      return DetailServices(networker: provideNetworker())
     }
 }

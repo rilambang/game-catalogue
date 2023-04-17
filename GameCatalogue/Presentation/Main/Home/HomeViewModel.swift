@@ -9,17 +9,17 @@ import Foundation
 import Combine
 
 class HomeViewModel: ObservableObject {
-
+    
     @Published var dataGames: [DataGames] = []
     @Published var homeState: HomeState = .loading
-
+    
     private let homeServices: HomeProtocol
     private var cancellables = Set<AnyCancellable>()
-
+    
     init(homeServices: HomeProtocol) {
         self.homeServices = homeServices
     }
-
+    
     func loadData() {
         homeState = .loading
         homeServices.getListGames(endPoint: .getListGames)

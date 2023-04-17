@@ -34,3 +34,4 @@ struct ErrorHandling: Decodable, Error, LocalizedError {
 // MARK: - DataClass
 struct DataClass: Decodable {
 }
+
